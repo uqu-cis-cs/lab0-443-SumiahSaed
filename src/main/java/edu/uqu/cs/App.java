@@ -8,7 +8,7 @@ package edu.uqu.cs;
 * Make sure to complete and submit your lab
 */
 
-
+import java.util.Scanner;
 public class App{
 
 /**  
@@ -45,14 +45,95 @@ public class App{
  
     public static void main(String [] args) {
         
-
-        /* Write your code here */
-     
-       //call method twisters()
-       //prompt user to enter a string 
-       //call method phoneKeypad(string)
-
-
+      twisters(); 
+      Scanner scn=new Scanner(System.in);
+      System.out.print("\ninput:");
+      String str=scn.nextLine();
+      phoneKeypad(str); 
     }
-
+    public static void twisters(){
+     int count, countNumbers=0;
+     for(count=1;count<=110;count++){
+        if(count%2==0){
+            System.out.print("Tweetle");
+         if(count%4==0){
+            System.out.print("Beetle");
+         }
+         if(count%6==0){
+            System.out.print("Poodle");
+         }   
+        } else{
+        System.out.print(" " + count + " ");;
+     }
+      
+     }
+    }
+        
+        
+    public static void phoneKeypad(String str) {
+      String small=str.toLowerCase();
+       int length=small.length();
+    
+     char c;
+          for(int count=0;count<=length-1;count++){
+         c=str.charAt(count);
+         switch(c){
+             case 'a':
+             case'b': 
+             case'c': 
+                 System.out.print("2");
+                 break;
+             case 'd' :
+             case'e':
+             case'f': 
+                 System.out.print("3");
+                 break;
+             case 'g' :
+             case 'h':
+             case 'i' : 
+                 System.out.print("4");
+                 break;
+             case 'j':
+             case 'k':
+             case 'l' :
+                 System.out.print("5"); 
+                 break;
+             case 'm':
+             case 'n':
+             case 'o':
+                 System.out.print("6");
+                 break;
+             case 'p':
+             case 'q':
+             case 'r':
+             case 's':
+                 System.out.print("7");
+                 break;
+             case 't':
+             case 'u':
+             case 'v':   
+                 System.out.print("8");
+                 break;
+             case 'w':
+             case 'y':
+             case 'z' :
+                 System.out.print("9");
+                 break;
+         }
+      }
+  }
 }
+    
+     
+       
+
+
+    
+
+
+    
+      
+      
+     
+    
+    
